@@ -10,25 +10,25 @@ const CardCep: React.FC<CardCepProps> = ({ viacep }) => {
   if (!viacep.cep) return null;
 
   return (
-    <div id='card-cep'>
+    <div id='card-cep' data-testid='card-cep'>
       <div className='container'>
         <div className='card'>
-          <span>
+          <span data-testid='span-cep'>
             <strong>CEP: </strong>
             {viacep.cep}
           </span>
           <br />
-          <span>
+          <span data-testid='span-uf'>
             <strong>Estado: </strong>
             {viacep.uf}
           </span>
           <br />
-          <span>
+          <span data-testid='span-localidade'>
             <strong>Cidade: </strong>
             {viacep.localidade}
           </span>
           <br />
-          <span>
+          <span data-testid='span-logradouro'>
             <strong>Logradouro: </strong>
             {viacep.logradouro}
           </span>

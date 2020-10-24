@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
-import useRequest from '../hooks/useRequest';
+import useRequest from '../hooks/useRequest/index';
 import '../styles/CardInput.css';
 
 interface CardInputProps {
@@ -30,6 +30,8 @@ const CardInput: React.FC<CardInputProps> = ({ dispatch }) => {
       } else {
         setCep(sanitizedValue);
       }
+    } else {
+      setCep('');
     }
   };
 
@@ -64,18 +66,22 @@ const CardInput: React.FC<CardInputProps> = ({ dispatch }) => {
   }, [error]);
 
   return (
-    <div id='card-input'>
+    <div id='card-input' data-testid='card-input'>
       <div className='container'>
         <div className='card'>
           <input
-            className='form-input'
             type='text'
             id='cep-input'
+            data-testid='cep-input'
             placeholder='00000-000'
             value={cep}
             onChange={onChangeHandler}
           />
-          <button onClick={onClickHandler} className='btn'>
+          <button
+            type='button'
+            onClick={onClickHandler}
+            data-testid='cep-button'
+          >
             Buscar CEP
           </button>
         </div>
