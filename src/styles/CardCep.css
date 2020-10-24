@@ -1,0 +1,25 @@
+#card-cep {
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-cep .container {
+  width: 55%;
+}
+
+#card-cep .card {
+  border: 1px solid black;
+  padding: 15px;
+  background: white;
+  border-color: rgba(173, 173, 173, 0.692);
+}
+
+#card-cep .card span {
+  color: rgba(71, 71, 71, 0.884);
+}
+#card-cep .card strong {
+  color: rgba(77, 77, 77, 0.884);
+}
