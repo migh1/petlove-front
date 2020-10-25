@@ -13,3 +13,8 @@
 ## test
 
 - yarn test [--coverage]
+
+## e2e
+
+- start back and front
+- yarn e2e
